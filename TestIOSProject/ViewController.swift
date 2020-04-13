@@ -15,6 +15,7 @@ class ViewController: UIViewController,  UITextFieldDelegate, UIImagePickerContr
     @IBOutlet weak var setNameMealButton: UIButton!
     @IBOutlet weak var imageHolder: UIImageView!
     
+    @IBOutlet weak var ratingControl: RatingControl!
     override func viewDidLoad() {
             super.viewDidLoad()
             // Handle the text field’s user input through delegate callbacks
