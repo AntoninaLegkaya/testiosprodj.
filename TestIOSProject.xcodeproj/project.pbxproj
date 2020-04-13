@@ -15,6 +15,7 @@
 		CEFF58B62440684300CA09CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFF58B52440684300CA09CF /* Main.storyboard */; };
 		CEFF58B8244096F500CA09CF /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFF58B7244096F500CA09CF /* RatingControl.swift */; };
 		CEFF58BC2440D42200CA09CF /* download1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CEFF58BB2440D42200CA09CF /* download1.jpeg */; };
+		CEFF58BE2444672B00CA09CF /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFF58BD2444672B00CA09CF /* Meal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		CEFF58B52440684300CA09CF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../Desktop/Main.storyboard; sourceTree = "<group>"; };
 		CEFF58B7244096F500CA09CF /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		CEFF58BB2440D42200CA09CF /* download1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = download1.jpeg; sourceTree = "<group>"; };
+		CEFF58BD2444672B00CA09CF /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				CEFF58AA2440681600CA09CF /* Assets.xcassets */,
 				CEFF58AC2440681600CA09CF /* LaunchScreen.storyboard */,
 				CEFF58AF2440681600CA09CF /* Info.plist */,
+				CEFF58BD2444672B00CA09CF /* Meal.swift */,
 			);
 			path = TestIOSProject;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEFF58BE2444672B00CA09CF /* Meal.swift in Sources */,
 				CEFF58B8244096F500CA09CF /* RatingControl.swift in Sources */,
 				CEFF58A62440681400CA09CF /* ViewController.swift in Sources */,
 				CEFF58A22440681400CA09CF /* AppDelegate.swift in Sources */,
