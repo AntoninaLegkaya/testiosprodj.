@@ -14,6 +14,7 @@
 		CEFF58AE2440681600CA09CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFF58AC2440681600CA09CF /* LaunchScreen.storyboard */; };
 		CEFF58B62440684300CA09CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFF58B52440684300CA09CF /* Main.storyboard */; };
 		CEFF58B8244096F500CA09CF /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFF58B7244096F500CA09CF /* RatingControl.swift */; };
+		CEFF58BC2440D42200CA09CF /* download1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CEFF58BB2440D42200CA09CF /* download1.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CEFF58AF2440681600CA09CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEFF58B52440684300CA09CF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../Desktop/Main.storyboard; sourceTree = "<group>"; };
 		CEFF58B7244096F500CA09CF /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		CEFF58BB2440D42200CA09CF /* download1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = download1.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +60,12 @@
 		CEFF58A02440681400CA09CF /* TestIOSProject */ = {
 			isa = PBXGroup;
 			children = (
+				CEFF58BB2440D42200CA09CF /* download1.jpeg */,
 				CEFF58B52440684300CA09CF /* Main.storyboard */,
-				CEFF58B7244096F500CA09CF /* RatingControl.swift */,
 				CEFF58A12440681400CA09CF /* AppDelegate.swift */,
 				CEFF58A32440681400CA09CF /* SceneDelegate.swift */,
 				CEFF58A52440681400CA09CF /* ViewController.swift */,
+				CEFF58B7244096F500CA09CF /* RatingControl.swift */,
 				CEFF58AA2440681600CA09CF /* Assets.xcassets */,
 				CEFF58AC2440681600CA09CF /* LaunchScreen.storyboard */,
 				CEFF58AF2440681600CA09CF /* Info.plist */,
@@ -131,6 +134,7 @@
 				CEFF58B62440684300CA09CF /* Main.storyboard in Resources */,
 				CEFF58AE2440681600CA09CF /* LaunchScreen.storyboard in Resources */,
 				CEFF58AB2440681600CA09CF /* Assets.xcassets in Resources */,
+				CEFF58BC2440D42200CA09CF /* download1.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
