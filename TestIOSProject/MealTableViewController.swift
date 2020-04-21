@@ -99,6 +99,17 @@ class MealTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    // MARK: Actions
+    @IBAction func unwindToMealList(sender: UIStoryboardSegue){
+        
+        if let sourceViewController = sender.source as? MealViewController, let meal = sourceViewController.meal{
+            // Add a new meal; computes the location where new item will be inserted and stored it in a local constant called newIndexPath
+            let newIndexPath = IndexPath(row: meals.count, section: 0)
+            meals.append(meal)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        }
+        
+    }
     
     // MARK: Private Methods
     private func loadSampleMeals(){

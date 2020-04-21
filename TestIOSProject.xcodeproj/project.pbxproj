@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		CEFF58A22440681400CA09CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFF58A12440681400CA09CF /* AppDelegate.swift */; };
 		CEFF58A42440681400CA09CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFF58A32440681400CA09CF /* SceneDelegate.swift */; };
-		CEFF58A62440681400CA09CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFF58A52440681400CA09CF /* ViewController.swift */; };
+		CEFF58A62440681400CA09CF /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFF58A52440681400CA09CF /* MealViewController.swift */; };
 		CEFF58AB2440681600CA09CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEFF58AA2440681600CA09CF /* Assets.xcassets */; };
 		CEFF58AE2440681600CA09CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFF58AC2440681600CA09CF /* LaunchScreen.storyboard */; };
 		CEFF58B62440684300CA09CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFF58B52440684300CA09CF /* Main.storyboard */; };
@@ -24,7 +24,7 @@
 		CEFF589E2440681400CA09CF /* TestIOSProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestIOSProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFF58A12440681400CA09CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEFF58A32440681400CA09CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CEFF58A52440681400CA09CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CEFF58A52440681400CA09CF /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
 		CEFF58AA2440681600CA09CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEFF58AD2440681600CA09CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEFF58AF2440681600CA09CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 				CEFF58BF244EF35A00CA09CF /* MealTableViewCell.swift */,
 				CEFF58A12440681400CA09CF /* AppDelegate.swift */,
 				CEFF58A32440681400CA09CF /* SceneDelegate.swift */,
-				CEFF58A52440681400CA09CF /* ViewController.swift */,
+				CEFF58A52440681400CA09CF /* MealViewController.swift */,
 				CEFF58B7244096F500CA09CF /* RatingControl.swift */,
 				CEFF58AA2440681600CA09CF /* Assets.xcassets */,
 				CEFF58AC2440681600CA09CF /* LaunchScreen.storyboard */,
@@ -158,7 +158,7 @@
 				CEFF58B8244096F500CA09CF /* RatingControl.swift in Sources */,
 				CEFF58C3244EFFAE00CA09CF /* MealTableViewController.swift in Sources */,
 				CEFF58C0244EF35A00CA09CF /* MealTableViewCell.swift in Sources */,
-				CEFF58A62440681400CA09CF /* ViewController.swift in Sources */,
+				CEFF58A62440681400CA09CF /* MealViewController.swift in Sources */,
 				CEFF58A22440681400CA09CF /* AppDelegate.swift in Sources */,
 				CEFF58A42440681400CA09CF /* SceneDelegate.swift in Sources */,
 			);

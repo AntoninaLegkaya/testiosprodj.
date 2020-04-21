@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MealViewController.swift
 //  TestIOSProject
 //
 //  Created by User on 10.04.2020.
@@ -7,13 +7,19 @@
 //
 
 import UIKit
+import os.log
 
-class ViewController: UIViewController,  UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+class MealViewController: UIViewController,  UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
-    @IBOutlet weak var defaultMealLabel: UILabel!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var enterMealName: UITextField!
     @IBOutlet weak var setNameMealButton: UIButton!
     @IBOutlet weak var imageHolder: UIImageView!
+    
+    // This value is either passed by "MealTableViewController" in 'prepare(for:sender)'
+    // or constructed as part of adding a new meal
+    
+    var meal: Meal?
     
     @IBOutlet weak var ratingControl: RatingControl!
     override func viewDidLoad() {
@@ -34,11 +40,11 @@ class ViewController: UIViewController,  UITextFieldDelegate, UIImagePickerContr
         
         func textFieldDidEndEditing(_ textField: UITextField) {
     // MARK: method gives you a chance to read the information entered into the text field and do //something with it
-            defaultMealLabel.text = textField.text
+            
         }
         
         @IBAction func setMealNameAction(_ sender: UIButton) {
-            defaultMealLabel.text=enterMealName.text
+          //  defaultMealLabel.text=enterMealName.text
             
         }
 
@@ -76,7 +82,27 @@ class ViewController: UIViewController,  UITextFieldDelegate, UIImagePickerContr
         dismiss(animated: true, completion: nil) 
     }
     
+    //MARK: Navigation
+    
+    // This method lets you configure a view controller befor it's presented
+    // this method verifies that the sender is button and than uses the identity operator(===) to check that the object referenced by the sender and the saveButton outlet are the same
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        // Configure the destination view controller only when the save button is pressed
+        guard let button = sender as? UIBarButtonItem, button === saveButton else {
+            os_log("The save button was not pressed, canceling", log: OSLog.default, type: .debug)
+            
+            return
+        }
+        let name = enterMealName.text ?? ""
+        let photo = imageHolder.image
+        let rating = ratingControl.rating
+   
+        // Set the meal tobe passed to MealTableViewController after the unwind segue
+        meal = Meal(name: name, photo: photo, rating: rating)
+    
+    }
 
-
+ 
 }
 
