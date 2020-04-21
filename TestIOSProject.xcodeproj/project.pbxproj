@@ -16,6 +16,8 @@
 		CEFF58B8244096F500CA09CF /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFF58B7244096F500CA09CF /* RatingControl.swift */; };
 		CEFF58BC2440D42200CA09CF /* download1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CEFF58BB2440D42200CA09CF /* download1.jpeg */; };
 		CEFF58BE2444672B00CA09CF /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFF58BD2444672B00CA09CF /* Meal.swift */; };
+		CEFF58C0244EF35A00CA09CF /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFF58BF244EF35A00CA09CF /* MealTableViewCell.swift */; };
+		CEFF58C3244EFFAE00CA09CF /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFF58C1244EFFAE00CA09CF /* MealTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		CEFF58B7244096F500CA09CF /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		CEFF58BB2440D42200CA09CF /* download1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = download1.jpeg; sourceTree = "<group>"; };
 		CEFF58BD2444672B00CA09CF /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		CEFF58BF244EF35A00CA09CF /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
+		CEFF58C1244EFFAE00CA09CF /* MealTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 			children = (
 				CEFF58BB2440D42200CA09CF /* download1.jpeg */,
 				CEFF58B52440684300CA09CF /* Main.storyboard */,
+				CEFF58BF244EF35A00CA09CF /* MealTableViewCell.swift */,
 				CEFF58A12440681400CA09CF /* AppDelegate.swift */,
 				CEFF58A32440681400CA09CF /* SceneDelegate.swift */,
 				CEFF58A52440681400CA09CF /* ViewController.swift */,
@@ -72,6 +77,7 @@
 				CEFF58AC2440681600CA09CF /* LaunchScreen.storyboard */,
 				CEFF58AF2440681600CA09CF /* Info.plist */,
 				CEFF58BD2444672B00CA09CF /* Meal.swift */,
+				CEFF58C1244EFFAE00CA09CF /* MealTableViewController.swift */,
 			);
 			path = TestIOSProject;
 			sourceTree = "<group>";
@@ -150,6 +156,8 @@
 			files = (
 				CEFF58BE2444672B00CA09CF /* Meal.swift in Sources */,
 				CEFF58B8244096F500CA09CF /* RatingControl.swift in Sources */,
+				CEFF58C3244EFFAE00CA09CF /* MealTableViewController.swift in Sources */,
+				CEFF58C0244EF35A00CA09CF /* MealTableViewCell.swift in Sources */,
 				CEFF58A62440681400CA09CF /* ViewController.swift in Sources */,
 				CEFF58A22440681400CA09CF /* AppDelegate.swift in Sources */,
 				CEFF58A42440681400CA09CF /* SceneDelegate.swift in Sources */,
