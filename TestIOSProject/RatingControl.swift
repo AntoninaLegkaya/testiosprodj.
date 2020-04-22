@@ -53,9 +53,9 @@ import UIKit
             
         button.translatesAutoresizingMaskIntoConstraints = false
         // defined height button
-            button.heightAnchor.constraint(equalToConstant: starSize.height).isActive = true
+           button.heightAnchor.constraint(equalToConstant: starSize.height).isActive = true
         // defined width button isActive=true -> adds constraint to the correct view and ectivates it
-            button.widthAnchor.constraint(equalToConstant: starSize.width).isActive = true
+           button.widthAnchor.constraint(equalToConstant: starSize.width).isActive = true
         
               //set the accessability label
                       button.accessibilityLabel = "Set \(index + 1) star rating"

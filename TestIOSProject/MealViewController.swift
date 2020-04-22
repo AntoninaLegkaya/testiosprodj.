@@ -14,8 +14,9 @@ class MealViewController: UIViewController,  UITextFieldDelegate, UIImagePickerC
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var enterMealName: UITextField!
     @IBOutlet weak var setNameMealButton: UIButton!
+
     @IBOutlet weak var imageHolder: UIImageView!
-    
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
     // This value is either passed by "MealTableViewController" in 'prepare(for:sender)'
     // or constructed as part of adding a new meal
     
@@ -28,7 +29,10 @@ class MealViewController: UIViewController,  UITextFieldDelegate, UIImagePickerC
             enterMealName.delegate = self
         
         enterMealName.attributedPlaceholder =
-            NSAttributedString(string: "Enter you value", attributes: [NSAttributedString.Key.foregroundColor : UIColor.red])        }
+            NSAttributedString(string: "Enter you value", attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray])
+        // Enable the Save Button only if the text field has a valid Meal name
+        updateSaveButtonState()
+    }
 
     // MARK:UITextFieldDelegate
         func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -40,28 +44,33 @@ class MealViewController: UIViewController,  UITextFieldDelegate, UIImagePickerC
         
         func textFieldDidEndEditing(_ textField: UITextField) {
     // MARK: method gives you a chance to read the information entered into the text field and do //something with it
-            
-        }
+            updateSaveButtonState()
+            navigationItem.title = textField.text
+    }
+    // editing session begins or when the keyboard gets displayed
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        //Disable save button while editing
+        saveButton.isEnabled = false
+    }
         
         @IBAction func setMealNameAction(_ sender: UIButton) {
           //  defaultMealLabel.text=enterMealName.text
-            
-        }
+            navigationItem.title = enterMealName.text}
 
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
-        
-        // Hide the keyboard
-        enterMealName.resignFirstResponder()
-        let imagePickerController = UIImagePickerController()
-        // Only allow photos to be picked not taken
-        imagePickerController.sourceType = .photoLibrary
-        // Make shure ViewController is notified when the user picks an image
-        imagePickerController.delegate = self
-        // method ask ViewController to present the view controller defined by imagePickerController ->animated: true animated the presentation of the image picker controller
-        // completion-> refers  to completion handler, a pice of code that executes after this method completes. In this case we don't need do execute a completion handler
-        present(imagePickerController, animated: true, completion: nil)
-    }
-    
+             
+             // Hide the keyboard
+             enterMealName.resignFirstResponder()
+             let imagePickerController = UIImagePickerController()
+             // Only allow photos to be picked not taken
+             imagePickerController.sourceType = .photoLibrary
+             // Make shure ViewController is notified when the user picks an image
+             imagePickerController.delegate = self
+             // method ask ViewController to present the view controller defined by imagePickerController ->animated: true  animated the presentation of the image picker controller
+             // completion-> refers  to completion handler, a pice of code that executes after this method completes. In this case we don't need do execute a completion handler
+             present(imagePickerController, animated: true, completion: nil)
+         }
+ 
     // To give users the ability to select a picture? need to implement two of the delegate methods define in UIImagePickerControllerDeligate
     //gets call when a user taps the image picker's Cancel btn; this methods gives chance to dismiss the UIImagePickerController
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -72,18 +81,23 @@ class MealViewController: UIViewController,  UITextFieldDelegate, UIImagePickerC
     
     // gets call when the user selects a photo -> do smth with photo
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
+        imageHolder.contentMode = UIView.ContentMode.scaleAspectFit
         // The info dictionary may contain multiple representations of the image. You want to use the origin
         guard let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as?
             UIImage else {
                  fatalError("Expected a dictionary containing an image? but was provided the following: \(info)")
         }
+        
         imageHolder.image = selectedImage
+        
         dismiss(animated: true, completion: nil) 
     }
     
     //MARK: Navigation
     
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
     // This method lets you configure a view controller befor it's presented
     // this method verifies that the sender is button and than uses the identity operator(===) to check that the object referenced by the sender and the saveButton outlet are the same
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -101,6 +115,13 @@ class MealViewController: UIViewController,  UITextFieldDelegate, UIImagePickerC
         // Set the meal tobe passed to MealTableViewController after the unwind segue
         meal = Meal(name: name, photo: photo, rating: rating)
     
+    }
+    //MARK: Private Methods
+    private func updateSaveButtonState(){
+        //Display the Save Button if the text field is empty
+        let text = enterMealName.text ?? ""
+        saveButton.isEnabled = !text.isEmpty
+        
     }
 
  
