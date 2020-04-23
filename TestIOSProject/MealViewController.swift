@@ -106,7 +106,16 @@ class MealViewController: UIViewController,  UITextFieldDelegate, UIImagePickerC
     //MARK: Navigation
     
     @IBAction func cancel(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+        // Depend on style of presentation (modal or push presentation), this view controller
+        // need to be dismiss in two different ways
+        let isPresentatingInAddMealMode = presentingViewController is UINavigationController
+        if isPresentatingInAddMealMode{
+            dismiss(animated: true, completion: nil)}
+        else if  let owningNavigationController = navigationController {
+            owningNavigationController.popViewController(animated: true)
+        } else{
+             fatalError("The MealViewController is not inside a navigation controller.")
+        }
     }
     // This method lets you configure a view controller befor it's presented
     // this method verifies that the sender is button and than uses the identity operator(===) to check that the object referenced by the sender and the saveButton outlet are the same

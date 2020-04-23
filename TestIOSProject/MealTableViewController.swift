@@ -18,6 +18,8 @@ class MealTableViewController: UITableViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Use the edit button item to provided by the table view controller
+        navigationItem.leftBarButtonItem = editButtonItem
 
         // Load the sample data
         loadSampleMeals()
@@ -56,25 +58,26 @@ class MealTableViewController: UITableViewController {
     }
     
 
-    /*
+   
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
+   
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
+             meals.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }   else if editingStyle == .insert{
+            //Create a new instance of the aoorioriate class, insert it into the array, and add anew to the table view
+        }
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
@@ -109,7 +112,7 @@ class MealTableViewController: UITableViewController {
                     fatalError("Unexpected destination: \(segue.destination)")
             }
             guard let selectedMealCell = sender as? MealTableViewCell else{
-                fatalError("Unexpected sender: \(sender)")
+                fatalError("Unexpected sender: \(String(describing: sender))")
             }
             guard let indexPath = tableView.indexPath(for: selectedMealCell) else {
                 fatalError("The selected cell is not being displayed by the table")
@@ -117,13 +120,14 @@ class MealTableViewController: UITableViewController {
             let selectedMeal = meals[indexPath.row]
             mealDetailViewController.meal = selectedMeal
         default:
-            fatalError("Unexpected Segue Identifier; \(segue.identifier)")
+            fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")
         }
     }
    
     // MARK: Actions
     @IBAction func unwindToMealList(sender: UIStoryboardSegue){
-         if let sourceViewController = sender.source as? MealViewController, let meal = sourceViewController.meal{
+         if let sourceViewController = sender.source as? MealViewController,
+            let meal = sourceViewController.meal{
             // this code checks whether a row in tableview is selected. If it is, thats means a user tapped one of the table views calls to edit a meal
         if let selectedIndexPath = tableView.indexPathForSelectedRow{
             // Update an existing meal in array
