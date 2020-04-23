@@ -93,7 +93,7 @@ import UIKit
         let selectedRating = index+1
         
         if selectedRating == rating {
-            // If the selected star represents the current rating? reset the rating to 0
+            // If the selected star represents the current rating, reset the rating to 0
             rating = 0
         } else {
             //Otherwise set the rating to the selected star
@@ -103,7 +103,6 @@ import UIKit
     
     private func updateButtonSelectionStates(){
         for (index, button) in ratingButtons.enumerated(){
-            
             // If the index of a button is less than the rating, that button should be selected.
             
             button.isSelected = index < rating
@@ -138,8 +137,8 @@ import UIKit
     //contains the list of buttons
      private var ratingButtons = [UIButton]()
     
-    // contains the cintrol's rating
-    var rating = 0{
+    // contains the control's rating
+    var rating = 0 {
         didSet{
             
             updateButtonSelectionStates()

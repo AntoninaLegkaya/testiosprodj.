@@ -30,9 +30,17 @@ class MealViewController: UIViewController,  UITextFieldDelegate, UIImagePickerC
         
         enterMealName.attributedPlaceholder =
             NSAttributedString(string: "Enter you value", attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray])
+        
+        // Set up views if editing an existing Meal
+        if let meal = meal{
+            navigationItem.title = meal.name
+            enterMealName.text = meal.name
+            imageHolder.image = meal.photo
+            ratingControl.rating = meal.rating
+            print("Init Rating-> \(ratingControl.rating)")
+        }
         // Enable the Save Button only if the text field has a valid Meal name
-        updateSaveButtonState()
-    }
+        updateSaveButtonState()    }
 
     // MARK:UITextFieldDelegate
         func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -55,7 +63,9 @@ class MealViewController: UIViewController,  UITextFieldDelegate, UIImagePickerC
         
         @IBAction func setMealNameAction(_ sender: UIButton) {
           //  defaultMealLabel.text=enterMealName.text
-            navigationItem.title = enterMealName.text}
+            navigationItem.title = enterMealName.text
+            updateSaveButtonState()
+    }
 
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
              
@@ -111,10 +121,11 @@ class MealViewController: UIViewController,  UITextFieldDelegate, UIImagePickerC
         let name = enterMealName.text ?? ""
         let photo = imageHolder.image
         let rating = ratingControl.rating
+        
+        
    
         // Set the meal tobe passed to MealTableViewController after the unwind segue
         meal = Meal(name: name, photo: photo, rating: rating)
-    
     }
     //MARK: Private Methods
     private func updateSaveButtonState(){
