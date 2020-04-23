@@ -137,6 +137,8 @@ class MealViewController: UIViewController,  UITextFieldDelegate, UIImagePickerC
         meal = Meal(name: name, photo: photo, rating: rating)
     }
     //MARK: Private Methods
+    
+  
     private func updateSaveButtonState(){
         //Display the Save Button if the text field is empty
         let text = enterMealName.text ?? ""
