@@ -65,7 +65,6 @@ class MealTableViewController: UITableViewController {
         return cell
     }
     
-
    
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -73,7 +72,6 @@ class MealTableViewController: UITableViewController {
         return true
     }
    
-
     
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -90,7 +88,6 @@ class MealTableViewController: UITableViewController {
         }
     }
     
-
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
@@ -188,7 +185,6 @@ class MealTableViewController: UITableViewController {
      }
      
      private func loadMeals() -> [Meal]?{
-         
          if let data = NSData(contentsOfFile: Meal.ArchiveURL.path){
            do {
              let  possibleObject = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data as Data) as? [Meal]
