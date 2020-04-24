@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		CEFF58A22440681400CA09CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFF58A12440681400CA09CF /* AppDelegate.swift */; };
 		CEFF58A42440681400CA09CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFF58A32440681400CA09CF /* SceneDelegate.swift */; };
-		CEFF58A62440681400CA09CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFF58A52440681400CA09CF /* ViewController.swift */; };
+		CEFF58A62440681400CA09CF /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFF58A52440681400CA09CF /* MealViewController.swift */; };
 		CEFF58AB2440681600CA09CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEFF58AA2440681600CA09CF /* Assets.xcassets */; };
 		CEFF58AE2440681600CA09CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFF58AC2440681600CA09CF /* LaunchScreen.storyboard */; };
 		CEFF58B62440684300CA09CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFF58B52440684300CA09CF /* Main.storyboard */; };
+		CEFF58B8244096F500CA09CF /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFF58B7244096F500CA09CF /* RatingControl.swift */; };
+		CEFF58BC2440D42200CA09CF /* download1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CEFF58BB2440D42200CA09CF /* download1.jpeg */; };
+		CEFF58BE2444672B00CA09CF /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFF58BD2444672B00CA09CF /* Meal.swift */; };
+		CEFF58C0244EF35A00CA09CF /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFF58BF244EF35A00CA09CF /* MealTableViewCell.swift */; };
+		CEFF58C3244EFFAE00CA09CF /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFF58C1244EFFAE00CA09CF /* MealTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CEFF589E2440681400CA09CF /* TestIOSProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestIOSProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFF58A12440681400CA09CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEFF58A32440681400CA09CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CEFF58A52440681400CA09CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CEFF58A52440681400CA09CF /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
 		CEFF58AA2440681600CA09CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEFF58AD2440681600CA09CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEFF58AF2440681600CA09CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEFF58B52440684300CA09CF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../Desktop/Main.storyboard; sourceTree = "<group>"; };
+		CEFF58B7244096F500CA09CF /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		CEFF58BB2440D42200CA09CF /* download1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = download1.jpeg; sourceTree = "<group>"; };
+		CEFF58BD2444672B00CA09CF /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		CEFF58BF244EF35A00CA09CF /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
+		CEFF58C1244EFFAE00CA09CF /* MealTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +66,18 @@
 		CEFF58A02440681400CA09CF /* TestIOSProject */ = {
 			isa = PBXGroup;
 			children = (
+				CEFF58BB2440D42200CA09CF /* download1.jpeg */,
 				CEFF58B52440684300CA09CF /* Main.storyboard */,
+				CEFF58BF244EF35A00CA09CF /* MealTableViewCell.swift */,
 				CEFF58A12440681400CA09CF /* AppDelegate.swift */,
 				CEFF58A32440681400CA09CF /* SceneDelegate.swift */,
-				CEFF58A52440681400CA09CF /* ViewController.swift */,
+				CEFF58A52440681400CA09CF /* MealViewController.swift */,
+				CEFF58B7244096F500CA09CF /* RatingControl.swift */,
 				CEFF58AA2440681600CA09CF /* Assets.xcassets */,
 				CEFF58AC2440681600CA09CF /* LaunchScreen.storyboard */,
 				CEFF58AF2440681600CA09CF /* Info.plist */,
+				CEFF58BD2444672B00CA09CF /* Meal.swift */,
+				CEFF58C1244EFFAE00CA09CF /* MealTableViewController.swift */,
 			);
 			path = TestIOSProject;
 			sourceTree = "<group>";
@@ -128,6 +143,7 @@
 				CEFF58B62440684300CA09CF /* Main.storyboard in Resources */,
 				CEFF58AE2440681600CA09CF /* LaunchScreen.storyboard in Resources */,
 				CEFF58AB2440681600CA09CF /* Assets.xcassets in Resources */,
+				CEFF58BC2440D42200CA09CF /* download1.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +154,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEFF58A62440681400CA09CF /* ViewController.swift in Sources */,
+				CEFF58BE2444672B00CA09CF /* Meal.swift in Sources */,
+				CEFF58B8244096F500CA09CF /* RatingControl.swift in Sources */,
+				CEFF58C3244EFFAE00CA09CF /* MealTableViewController.swift in Sources */,
+				CEFF58C0244EF35A00CA09CF /* MealTableViewCell.swift in Sources */,
+				CEFF58A62440681400CA09CF /* MealViewController.swift in Sources */,
 				CEFF58A22440681400CA09CF /* AppDelegate.swift in Sources */,
 				CEFF58A42440681400CA09CF /* SceneDelegate.swift in Sources */,
 			);
